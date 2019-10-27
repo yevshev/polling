@@ -64,12 +64,15 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	for _, node := range nodeList {
-		wg.Add(1)
-		go func(nodeAddress string) {
-			defer wg.Done()
-			collectCPUTemperature(nodeAddress)
-		}(node)
+	for {
+		for _, node := range nodeList {
+			wg.Add(1)
+			go func(nodeAddress string) {
+				defer wg.Done()
+				collectCPUTemperature(nodeAddress)
+			}(node)
+		}
 	}
+
 	wg.Wait()
 }
