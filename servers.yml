@@ -162,645 +162,645 @@ services:
     networks:
       - ssenet
 
-  server20:
-    hostname: server20
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server20:
+  #   hostname: server20
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server21:
-    hostname: server21
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server21:
+  #   hostname: server21
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server22:
-    hostname: server22
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server22:
+  #   hostname: server22
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server23:
-    hostname: server23
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server23:
+  #   hostname: server23
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server24:
-    hostname: server24
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server24:
+  #   hostname: server24
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server25:
-    hostname: server25
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server25:
+  #   hostname: server25
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server26:
-    hostname: server26
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server26:
+  #   hostname: server26
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server27:
-    hostname: server27
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server27:
+  #   hostname: server27
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server28:
-    hostname: server28
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server28:
+  #   hostname: server28
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server29:
-    hostname: server29
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server29:
+  #   hostname: server29
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server30:
-    hostname: server30
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server30:
+  #   hostname: server30
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server31:
-    hostname: server31
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server31:
+  #   hostname: server31
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server32:
-    hostname: server32
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server32:
+  #   hostname: server32
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server33:
-    hostname: server33
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server33:
+  #   hostname: server33
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server34:
-    hostname: server34
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server34:
+  #   hostname: server34
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server35:
-    hostname: server35
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server35:
+  #   hostname: server35
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server36:
-    hostname: server36
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server36:
+  #   hostname: server36
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server37:
-    hostname: server37
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server37:
+  #   hostname: server37
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server38:
-    hostname: server38
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server38:
+  #   hostname: server38
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server39:
-    hostname: server39
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server39:
+  #   hostname: server39
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server40:
-    hostname: server40
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server40:
+  #   hostname: server40
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server41:
-    hostname: server41
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server41:
+  #   hostname: server41
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server42:
-    hostname: server42
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server42:
+  #   hostname: server42
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server43:
-    hostname: server43
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server43:
+  #   hostname: server43
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server44:
-    hostname: server44
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server44:
+  #   hostname: server44
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server45:
-    hostname: server45
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server45:
+  #   hostname: server45
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server46:
-    hostname: server46
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server46:
+  #   hostname: server46
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server47:
-    hostname: server47
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server47:
+  #   hostname: server47
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server48:
-    hostname: server48
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server48:
+  #   hostname: server48
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server49:
-    hostname: server49
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server49:
+  #   hostname: server49
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server50:
-    hostname: server50
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server50:
+  #   hostname: server50
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server51:
-    hostname: server51
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server51:
+  #   hostname: server51
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server52:
-    hostname: server52
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server52:
+  #   hostname: server52
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server53:
-    hostname: server53
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server53:
+  #   hostname: server53
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server54:
-    hostname: server54
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server54:
+  #   hostname: server54
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server55:
-    hostname: server55
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server55:
+  #   hostname: server55
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server56:
-    hostname: server56
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server56:
+  #   hostname: server56
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server57:
-    hostname: server57
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server57:
+  #   hostname: server57
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server58:
-    hostname: server58
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server58:
+  #   hostname: server58
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server59:
-    hostname: server59
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server59:
+  #   hostname: server59
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server60:
-    hostname: server60
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server60:
+  #   hostname: server60
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server61:
-    hostname: server61
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server61:
+  #   hostname: server61
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server62:
-    hostname: server62
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server62:
+  #   hostname: server62
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server63:
-    hostname: server63
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server63:
+  #   hostname: server63
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server64:
-    hostname: server64
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server64:
+  #   hostname: server64
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server65:
-    hostname: server65
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server65:
+  #   hostname: server65
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server66:
-    hostname: server66
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server66:
+  #   hostname: server66
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server67:
-    hostname: server67
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server67:
+  #   hostname: server67
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server68:
-    hostname: server68
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server68:
+  #   hostname: server68
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server69:
-    hostname: server69
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server69:
+  #   hostname: server69
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server70:
-    hostname: server70
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server70:
+  #   hostname: server70
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server71:
-    hostname: server71
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server71:
+  #   hostname: server71
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server72:
-    hostname: server72
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server72:
+  #   hostname: server72
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server73:
-    hostname: server73
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server73:
+  #   hostname: server73
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server74:
-    hostname: server74
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server74:
+  #   hostname: server74
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server75:
-    hostname: server75
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server75:
+  #   hostname: server75
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server76:
-    hostname: server76
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server76:
+  #   hostname: server76
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server77:
-    hostname: server77
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server77:
+  #   hostname: server77
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server78:
-    hostname: server78
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server78:
+  #   hostname: server78
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server79:
-    hostname: server79
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server79:
+  #   hostname: server79
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server80:
-    hostname: server80
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server80:
+  #   hostname: server80
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server81:
-    hostname: server81
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server81:
+  #   hostname: server81
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server82:
-    hostname: server82
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server82:
+  #   hostname: server82
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server83:
-    hostname: server83
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server83:
+  #   hostname: server83
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server84:
-    hostname: server84
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server84:
+  #   hostname: server84
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server85:
-    hostname: server85
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server85:
+  #   hostname: server85
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server86:
-    hostname: server86
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server86:
+  #   hostname: server86
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server87:
-    hostname: server87
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server87:
+  #   hostname: server87
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server88:
-    hostname: server88
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server88:
+  #   hostname: server88
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server89:
-    hostname: server89
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server89:
+  #   hostname: server89
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server90:
-    hostname: server90
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server90:
+  #   hostname: server90
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
  
-  server91:
-    hostname: server91
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server91:
+  #   hostname: server91
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server92:
-    hostname: server92
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server92:
+  #   hostname: server92
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server93:
-    hostname: server93
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server93:
+  #   hostname: server93
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server94:
-    hostname: server94
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server94:
+  #   hostname: server94
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server95:
-    hostname: server95
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server95:
+  #   hostname: server95
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server96:
-    hostname: server96
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server96:
+  #   hostname: server96
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server97:
-    hostname: server97
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server97:
+  #   hostname: server97
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server98:
-    hostname: server98
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server98:
+  #   hostname: server98
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
-  server99:
-    hostname: server99
-    image: yevshev/http-server:latest
-    ports:
-      - "8000"
-    networks:
-      - ssenet
+  # server99:
+  #   hostname: server99
+  #   image: yevshev/http-server:latest
+  #   ports:
+  #     - "8000"
+  #   networks:
+  #     - ssenet
 
   # server100:
   #   hostname: server100
