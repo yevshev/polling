@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strconv"
 	"sync"
 	"time"
 )
@@ -57,8 +58,8 @@ func main() {
 
 	//Fill array with server hostnames
 	for i := range nodeList {
-		//var nodeNum = strconv.Itoa(i)
-		nodeList[i] = "localhost" /*+ nodeNum*/ + ":8000"
+		var nodeNum = strconv.Itoa(i)
+		nodeList[i] = "server" + nodeNum + ":8000"
 	}
 
 	var wg sync.WaitGroup
@@ -71,5 +72,4 @@ func main() {
 		}(node)
 	}
 	wg.Wait()
-	//collectCPUTemperature("localhost:8000")
 }

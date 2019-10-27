@@ -28,6 +28,8 @@ func randTemperature(min, max float64) float64 {
 
 // CPU temperature
 func GetCPUTemp() []byte {
+
+	// Get hostname
 	hostName, err := os.Hostname()
 	if err != nil {
 		panic(err)
@@ -54,11 +56,10 @@ func main() {
 	http.HandleFunc("/redfish/v1/", ResponseServer)
 
 	// Get hostname
-	//hostName, err := os.Hostname()
-	//if err != nil {
-	//	panic(err)
-	//}
+	hostName, err := os.Hostname()
+	if err != nil {
+		panic(err)
+	}
 
-	//http.ListenAndServe(hostName+":8000", nil)
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(hostName+":8000", nil)
 }
