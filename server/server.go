@@ -30,16 +30,15 @@ func randTemperature(min, max float64) float64 {
 func GetCPUTemp() []byte {
 
 	// Get hostname
-	hostName, err := os.Hostname()
+	hostname, err := os.Hostname()
 	if err != nil {
 		panic(err)
 	}
-	//log.Println("CPU temperature")
 
 	//Its a mockup CPU temperature
 	cpuTempObj := new(CPUTempObj)
 	cpuTempObj.TimeStamp = time.Now()
-	cpuTempObj.HostAddress = hostName
+	cpuTempObj.HostAddress = hostname
 	cpuTempObj.CPUTemp = randTemperature(3.0, 98.0)
 
 	jsonObj, err := json.Marshal(cpuTempObj)
@@ -52,14 +51,14 @@ func GetCPUTemp() []byte {
 
 func main() {
 
-	// Register with /events endpoint.
+	// Register endpoint.
 	http.HandleFunc("/redfish/v1/", ResponseServer)
 
 	// Get hostname
-	hostName, err := os.Hostname()
+	hostname, err := os.Hostname()
 	if err != nil {
 		panic(err)
 	}
 
-	http.ListenAndServe(hostName+":8000", nil)
+	http.ListenAndServe(hostname+":8000", nil)
 }

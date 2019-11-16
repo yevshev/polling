@@ -18,7 +18,6 @@ type CPUTempObj struct {
 }
 
 func lambdaStateDiscovery(v CPUTempObj) (string, float64, string, string) {
-
 	cpu_temp := v.CPUTemp
 	cpu_temp_state := "CPU_TEMP_NONDETERMINISTIC"
 	host_address := v.HostAddress
