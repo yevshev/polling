@@ -12,7 +12,7 @@ Deploy the http server containers defined in [servers.yml](https://github.com/ye
 ```sh
 $ docker stack deploy -c servers.yml http
 ```
-Deploy the http client container defined in [client.yml](https://github.com/yevshev/polling/blob/master/client.yml), runnin our Go http client binary, and name it 'polling':
+Deploy the http client container defined in [client.yml](https://github.com/yevshev/polling/blob/master/client.yml), running our Go http client binary, and name it 'polling':
 
 ```sh
 $ docker stack deploy -c client.yml polling
@@ -28,4 +28,10 @@ $ docker service logs polling_client -f
 View a real-time feed of resource utilization and performance for each runing container:
 ```sh
 $ docker stats
+```
+
+## Cleanup
+Stop and delete the 'http' server stack and 'polling' client stack:
+```sh
+$ docker stack rm http polling
 ```
