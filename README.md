@@ -41,3 +41,6 @@ Stop and delete the 'http' server stack and 'polling' client stack:
 ```sh
 $ docker stack rm http polling
 ```
+
+
+# [Demonstration](https://asciinema.org/a/Kp2seNiUh3z5dCKvQMCOfxKQo)
