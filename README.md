@@ -1,4 +1,5 @@
 # HTTP Polling Simulation
+[![asciicast](https://asciinema.org/a/Kp2seNiUh3z5dCKvQMCOfxKQo.png)](https://asciinema.org/a/Kp2seNiUh3z5dCKvQMCOfxKQo)
 *Server-sent Event repository can be found [here](https://github.com/yevshev/server-sent)*
 
 ## Information
@@ -41,6 +42,3 @@ Stop and delete the 'http' server stack and 'polling' client stack:
 ```sh
 $ docker stack rm http polling
 ```
-
-
-# [Demonstration](https://asciinema.org/a/Kp2seNiUh3z5dCKvQMCOfxKQo)
