@@ -83,10 +83,11 @@ func main() {
 	for {
 		select {
 		case <-ticker.C:
-			for _, node := range nodeList { 
-				go collectCPUTemperature(node)
-			}
-			break
+			// for _, node := range nodeList { 
+			// 	go collectCPUTemperature(node)
+			// }
+			// break
+			fmt.Println("***Thermal Request***")
 		}
 	}
 }
