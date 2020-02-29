@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
-	"sync"
+	//"sync"
 	"time"
 )
 
@@ -62,17 +62,31 @@ func main() {
 		nodeList[i] = "server" + nodeNum + ":8000"
 	}
 
-	var wg sync.WaitGroup
+	// var wg sync.WaitGroup
 
+	// for {
+	// 	for _, node := range nodeList {
+	// 		wg.Add(1)
+	// 		go func(nodeAddress string) {
+	// 			defer wg.Done()
+	// 			collectCPUTemperature(nodeAddress)
+	// 		}(node)
+	// 	}
+	// }
+
+	// wg.Wait()
+	
+	// ticker @ freqInterval seconds
+	ticker := time.NewTicker(10 * time.Second)
+
+	// main loop
 	for {
-		for _, node := range nodeList {
-			wg.Add(1)
-			go func(nodeAddress string) {
-				defer wg.Done()
-				collectCPUTemperature(nodeAddress)
-			}(node)
+		select {
+		case <-ticker.C:
+			for _, node := range nodeList { 
+				go collectCPUTemperature(node)
+			}
+			break
 		}
 	}
-
-	wg.Wait()
 }
