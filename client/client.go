@@ -87,7 +87,7 @@ func main() {
 
 			//println(nodeAddress)
 			resp, err := GetNodeCPUTemp(nodeAddress, timeout)
-			fmt.Fprintln(resp)
+			fmt.Println(resp)
 			if err != nil {
 				errc <- err
 				return
@@ -100,15 +100,15 @@ func main() {
 		select {
 		case res := <-respc:
 			nodeCPUTempList = append(nodeCPUTempList, res)
-			timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
+			//timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
 			//fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
 		case e := <-errc:
 			errorList = append(errorList, e.Error())
 
 		}
 	}
-	//fmt.Printf("\n Total Successful Responses From all Nodes: %d\n", len(nodeCPUTempList))
-	//fmt.Printf("\n Total Errors: %d\n", len(errorList))
+	fmt.Printf("\n Total Successful Responses From all Nodes: %d\n", len(nodeCPUTempList))
+	fmt.Printf("\n Total Errors: %d\n", len(errorList))
 
 	// 	}
 	// }
