@@ -85,8 +85,9 @@ func main() {
 
 		go func(nodeAddress string, timeout int) {
 
-			println(nodeAddress)
+			//println(nodeAddress)
 			resp, err := GetNodeCPUTemp(nodeAddress, timeout)
+			fmt.Fprintln(resp)
 			if err != nil {
 				errc <- err
 				return
@@ -100,14 +101,14 @@ func main() {
 		case res := <-respc:
 			nodeCPUTempList = append(nodeCPUTempList, res)
 			timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
-			fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+			//fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
 		case e := <-errc:
 			errorList = append(errorList, e.Error())
 
 		}
 	}
-	fmt.Printf("\n Total Successful Responses from Pi nodes: %d\n", len(nodeCPUTempList))
-	fmt.Printf("\n Total Errors: %d\n", len(errorList))
+	//fmt.Printf("\n Total Successful Responses From all Nodes: %d\n", len(nodeCPUTempList))
+	//fmt.Printf("\n Total Errors: %d\n", len(errorList))
 
 	// 	}
 	// }
