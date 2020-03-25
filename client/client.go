@@ -75,40 +75,40 @@ func main() {
 
 	respc, errc := make(chan CPUTempObj), make(chan error)
 
-	ticker := time.NewTicker(60 * time.Second)
+	//ticker := time.NewTicker(60 * time.Second)
 
 	// main loop
-	for {
+	// for {
+	// 	select {
+	// 	case <-ticker.C:
+	for _, node := range nodeList {
+
+		go func(nodeAddress string, timeout int) {
+
+			println(nodeAddress)
+			resp, err := GetNodeCPUTemp(nodeAddress, timeout)
+			if err != nil {
+				errc <- err
+				return
+			}
+			respc <- resp
+		}(node, 500)
+
+	}
+	for i := 0; i < len(nodeList); i++ {
 		select {
-		case <-ticker.C:
-			for _, node := range nodeList {
-
-				go func(nodeAddress string, timeout int) {
-
-					println(nodeAddress)
-					resp, err := GetNodeCPUTemp(nodeAddress, timeout)
-					if err != nil {
-						errc <- err
-						return
-					}
-					respc <- resp
-				}(node, 1000)
-
-			}
-			for i := 0; i < len(nodeList); i++ {
-				select {
-				case res := <-respc:
-					nodeCPUTempList = append(nodeCPUTempList, res)
-					timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
-					fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
-				case e := <-errc:
-					errorList = append(errorList, e.Error())
-
-				}
-			}
-			fmt.Printf("\n Total Successful Responses from Pi nodes: %d\n", len(nodeCPUTempList))
-			fmt.Printf("\n Total Errors: %d\n", len(errorList))
+		case res := <-respc:
+			nodeCPUTempList = append(nodeCPUTempList, res)
+			timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
+			fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+		case e := <-errc:
+			errorList = append(errorList, e.Error())
 
 		}
 	}
+	fmt.Printf("\n Total Successful Responses from Pi nodes: %d\n", len(nodeCPUTempList))
+	fmt.Printf("\n Total Errors: %d\n", len(errorList))
+
+	// 	}
+	// }
 }
