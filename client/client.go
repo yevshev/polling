@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 	"strconv"
+
 	//"sync"
 	"time"
 )
@@ -34,60 +34,81 @@ func lambdaStateDiscovery(v CPUTempObj) (string, float64, string, string) {
 
 }
 
-func collectCPUTemperature(hostName string) {
-
-	resp, err := http.Get("http://" + hostName + "/redfish/v1/Chassis/1/Thermal")
-	if err != nil {
-		return
-	}
+func GetNodeCPUTemp(nodeIP string, timeOut int) (CPUTempObj, error) {
 
 	var result CPUTempObj
-	byteResp, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatal(err)
+	url := "http://" + nodeIP + ":8000/redfish/v1/Chassis/1/Thermal"
+
+	client := http.Client{
+		Timeout: (time.Duration(timeOut) * time.Millisecond),
 	}
 
-	json.Unmarshal(byteResp, &result)
-	timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
-	fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+	resp, err := client.Get(url)
+
+	if err != nil {
+		fmt.Printf("\nThe HTTP request failed with error %s\n", err)
+		return result, err
+	} else {
+		defer resp.Body.Close()
+		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			return result, err
+		}
+
+		json.Unmarshal(body, &result)
+		return result, nil
+	}
+
 }
+
 func main() {
 
 	// Poll 50 servers
 	var nodeList [50]string
-
-	//Fill array with server hostnames
 	for i := range nodeList {
-		var nodeNum = strconv.Itoa(i)
-		nodeList[i] = "server" + nodeNum + ":8000"
+		nodeNum := strconv.Itoa(i)
+		nodeList[i] = "server" + nodeNum
 	}
 
-	// var wg sync.WaitGroup
+	var nodeCPUTempList []CPUTempObj
+	var errorList []string
 
-	// for {
-	// 	for _, node := range nodeList {
-	// 		wg.Add(1)
-	// 		go func(nodeAddress string) {
-	// 			defer wg.Done()
-	// 			collectCPUTemperature(nodeAddress)
-	// 		}(node)
-	// 	}
-	// }
+	respc, errc := make(chan CPUTempObj), make(chan error)
 
-	// wg.Wait()
-	
-	// ticker @ freqInterval seconds
-	ticker := time.NewTicker(10 * time.Second)
+	ticker := time.NewTicker(60 * time.Second)
 
 	// main loop
 	for {
 		select {
 		case <-ticker.C:
-			// for _, node := range nodeList { 
-			// 	go collectCPUTemperature(node)
-			// }
-			// break
-			fmt.Println("***Thermal Request***")
+			for _, node := range nodeList {
+
+				go func(nodeAddress string, timeout int) {
+
+					println(nodeAddress)
+					resp, err := GetNodeCPUTemp(nodeAddress, timeout)
+					if err != nil {
+						errc <- err
+						return
+					}
+					respc <- resp
+				}(node, 1000)
+
+			}
+			for i := 0; i < len(nodeList); i++ {
+				select {
+				case res := <-respc:
+					nodeCPUTempList = append(nodeCPUTempList, res)
+					timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
+					fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+				case e := <-errc:
+					errorList = append(errorList, e.Error())
+
+				}
+			}
+			fmt.Printf("\n Total Successful Responses from Pi nodes: %d\n", len(nodeCPUTempList))
+			fmt.Printf("\n Total Errors: %d\n", len(errorList))
+
 		}
 	}
 }
