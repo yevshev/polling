@@ -51,6 +51,7 @@ func collectCPUTemperature(hostName string) {
 		json.Unmarshal(body, &result)
 		timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
 		fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+		time.Sleep(1 * time.Second)
 	}
 }
 
