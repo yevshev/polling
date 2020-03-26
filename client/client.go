@@ -36,25 +36,23 @@ func lambdaStateDiscovery(v CPUTempObj) (string, float64, string, string) {
 
 func collectCPUTemperature(hostName string) {
 
-	go func() {
-		for {
-			resp, err := http.Get("http://" + hostName + "/redfish/v1/Chassis/1/Thermal")
-			if err != nil {
-				return
-			}
-			defer resp.Body.Close()
-
-			var result CPUTempObj
-			body, err := ioutil.ReadAll(resp.Body)
-			if err != nil {
-				log.Fatal(err)
-			}
-			json.Unmarshal(body, &result)
-			timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
-			fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
-			time.Sleep(1 * time.Second)
+	for {
+		resp, err := http.Get("http://" + hostName + "/redfish/v1/Chassis/1/Thermal")
+		if err != nil {
+			return
 		}
-	}()
+		defer resp.Body.Close()
+
+		var result CPUTempObj
+		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		json.Unmarshal(body, &result)
+		timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
+		fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+		time.Sleep(1 * time.Second)
+	}
 }
 
 func main() {
