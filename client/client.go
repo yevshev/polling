@@ -100,8 +100,8 @@ func main() {
 		select {
 		case res := <-respc:
 			nodeCPUTempList = append(nodeCPUTempList, res)
-			//timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
-			//fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
+			timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(res)
+			fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
 		case e := <-errc:
 			errorList = append(errorList, e.Error())
 
