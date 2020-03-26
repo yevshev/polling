@@ -36,21 +36,23 @@ func lambdaStateDiscovery(v CPUTempObj) (string, float64, string, string) {
 
 func collectCPUTemperature(hostName string) {
 
-	resp, err := http.Get("http://" + hostName + "/redfish/v1/Chassis/1/Thermal")
-	if err != nil {
-		return
-	}
+	for {
+		resp, err := http.Get("http://" + hostName + "/redfish/v1/Chassis/1/Thermal")
+		if err != nil {
+			return
+		}
 
-	var result CPUTempObj
-	byteResp, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatal(err)
+		var result CPUTempObj
+		body, err := ioutil.ReadAll(resp.Body)
+		if err != nil {
+			log.Fatal(err)
+		}
+		json.Unmarshal(body, &result)
+		timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
+		fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
 	}
-
-	json.Unmarshal(byteResp, &result)
-	timestamp, cpu_temp, cpu_temp_state, host_address := lambdaStateDiscovery(result)
-	fmt.Printf("%v %s %.2fC %s\n", timestamp, host_address, cpu_temp, cpu_temp_state)
 }
+
 func main() {
 
 	// Poll 50 servers
@@ -64,14 +66,12 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	for {
-		for _, node := range nodeList {
-			wg.Add(1)
-			go func(nodeAddress string) {
-				defer wg.Done()
-				collectCPUTemperature(nodeAddress)
-			}(node)
-		}
+	for _, node := range nodeList {
+		wg.Add(1)
+		go func(nodeAddress string) {
+			defer wg.Done()
+			collectCPUTemperature(nodeAddress)
+		}(node)
 	}
 
 	wg.Wait()
