@@ -41,6 +41,7 @@ func collectCPUTemperature(hostName string) {
 		if err != nil {
 			return
 		}
+		defer resp.Body.Close()
 
 		var result CPUTempObj
 		body, err := ioutil.ReadAll(resp.Body)
