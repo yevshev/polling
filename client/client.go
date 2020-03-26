@@ -87,7 +87,7 @@ func main() {
 
 			//println(nodeAddress)
 			resp, err := GetNodeCPUTemp(nodeAddress, timeout)
-			fmt.Println(resp)
+
 			if err != nil {
 				errc <- err
 				return
