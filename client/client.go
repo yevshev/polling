@@ -87,7 +87,6 @@ func main() {
 
 			//println(nodeAddress)
 			resp, err := GetNodeCPUTemp(nodeAddress, timeout)
-
 			if err != nil {
 				errc <- err
 				return
