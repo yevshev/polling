@@ -57,8 +57,8 @@ func collectCPUTemperature(hostName string) {
 
 func main() {
 
-	// Poll 50 servers
-	var nodeList [50]string
+	// Poll 200 servers
+	var nodeList [200]string
 
 	//Fill array with server hostnames
 	for i := range nodeList {
